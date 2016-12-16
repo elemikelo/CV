@@ -11,24 +11,26 @@ body{
   background-color: #FFF;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 .text-black-h2{
 	font-family: "Open Sans", sans-serif;
-	color: rgba(0,0,0,0.87);
-	font-weight: 400;
+	color: #3A3E3E;
+	font-weight: 300;
 	font-size: 30px;
+	text-align: center;
 
 }
+
+.text-grey-h2{
+	font-family: "Open Sans", sans-serif;
+	color: #A5B2B2;
+	font-weight: 300;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+
 
 .header > .img-portada{
   width: 100%;
@@ -72,6 +74,10 @@ body{
   z-index: 1000;
 }
 
+.navbar:hover{
+	opacity: 1;
+}
+
 .navbar > .title{
   position: absolute;
   font-family: 'Pacifico', cursive;
@@ -82,6 +88,7 @@ body{
   text-decoration: none;
   left: 20px;
 }
+
 
 .navbar > .navbar-list{
   list-style-type: none;
@@ -94,6 +101,16 @@ body{
   display: inline-block;
   font-size: 16px;
 }
+.navbar > .navbar-list > .navbar-item > .navbar-link.active {
+	color: #FFF;
+	opacity: 0.4;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link:hover{
+	color: #FFF;
+	opacity: 0.4;
+
+}
 
 .navbar > .navbar-list > .navbar-item > .navbar-link{
   font-family: "Open Sans", sans-serif;
@@ -103,12 +120,13 @@ body{
   color: #FFF;
 }
 
-.navbar > .navbar-list > .navbar-item > .navbar-link:hover{
-	color: #FFF;
-}
 
 .footer{
   font-family: "Open Sans", sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.5;
   color: #FFF;
   width: 100%;
   background-color: #353c3c;
@@ -120,24 +138,27 @@ body{
   top: 100px;
 }
 
-.about-me > .photo{
-  float: left;
+.photo-me{
+	position: relative;
+	left: -12px;
   width: 400px;
   height: 300px;
-  background-image: url('../images/photo.png');
-  background-size: 100% 100%;
-  background-position: center center;
 }
 
-.about-me > .resume{
+.resume{
 
-  float: left;
-  max-width: 50%;
-  font-family: 'Roboto', sans-serif;
-	animation-duration: 3s;
-  animation-name: slidein;
+  text-align: center;
+	font-family: "Open Sans", sans-serif;
+	color: #3A3E3E;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2;
+}
 
-
+.resume-position{
+	position: relative;
+	right: -9%;
 }
 
 .section-content {
@@ -147,16 +168,46 @@ body{
 
 .studies{
 	width: 100%;
-	height: 200px;
-	background-color: #3a8285;
+	height: 350px;
+	background-color: #f6f7f7;
 }
 
-.studies > .studies-list{
-	color: #FFF;
+.studies-list{
+	list-style-type: none;
+	line-height: 2;
+	text-align: center;
 	font-family: "Open Sans", sans-serif;
-
-
+	color: #3A3E3E;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2;
 }
+
+ul.studies-list li{
+	padding-bottom: 4ex;
+}
+
+
+.experience{
+	width: 100%;
+	height: 300px;
+	background-color: #FFF;
+}
+
+.about-me{
+	width: 100%;
+	height: 300px;
+	background-color: #353c3c;
+	padding-top: 50px;
+	font-family: "Open Sans", sans-serif;
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2;
+}
+
 
 
 .clearfix:after {

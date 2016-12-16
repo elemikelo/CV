@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <title>Currículum</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600|Roboto:300,400|Pacifico" rel="stylesheet">
+
 </head>
 
 <body>
@@ -17,12 +19,12 @@
 
     </header>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar-id">
         <a href="#" class="title">Curriculum Vitae</a>
 
         <ul class="navbar-list">
-            <li class="navbar-item active">
-                <a href="#" class="navbar-link">PORTADA</a>
+            <li class="navbar-item">
+                <a href="#" class="navbar-link active">PORTADA</a>
             </li>
             <li class="navbar-item">
                 <a href="#quien-soy" class="navbar-link">QUIEN SOY</a>
@@ -43,32 +45,62 @@
 
     </nav>
 
-    <main class="container">
-        <section id="quien-soy" class="about-me clearfix section-content">
-            <div class="photo"></div>
-            <h2 class="text-black-h2">Quien soy...</h2>
-            <div class="resume">
-                Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes
-                comunicativas y analíticas.
-                Durante mi experiencia profesional he asumido distintas responsabilidades en la toma de decisiones,
-                aportando conocimientos
-                y generando nuevas ideas orientadas a optimizar nuevos proyectos y procesos de puesta en marcha.
-                Siempre abierto a nuevos retos donde mi background profesional
-                aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.
+    <main class="container-main">
+        <section id="quien-soy" class="who-am-i clearfix">
+            <div class="row container section-content">
+              <div class="col-4">
+                <figure class="photo-me">
+  								<img src="images/photo.png" alt="Foto de Luis Miguel" width="400px" height="300px">
+  								<figcaption class="photo-name"></figcaption>
+  							</figure>
+              </div>
+              <div class="col-6 resume-position">
+                <h2 class="text-black-h2">Quien soy</h2>
+                <p class="resume">
+                  Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes
+                  comunicativas y analíticas.
+                  Durante mi experiencia profesional he asumido distintas responsabilidades en la toma de decisiones,
+                  aportando conocimientos
+                  y generando nuevas ideas orientadas a optimizar nuevos proyectos y procesos de puesta en marcha.
+                  Siempre abierto a nuevos retos donde mi background profesional
+                  aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.
+                </p>
+              </div>
             </div>
         </section>
-        <section id="estudios" class="studies clearfix section-content">
-          <ul class="studies-list">
-            <h2 class="text-black-h2">Estudios...</h2>
-            <li>KeepCoding Web Development Master Bootcamp. Noviembre 2017</li>
-            <li>F.P.E.G.S. Sistemas de Regulación y control automáticos. Septiembre 2012</li>
-          </ul>
 
+
+      <section id="estudios" class="studies clearfix">
+        <div class="row container section-content">
+          <div class="col-12">
+            <h2 class="text-black-h2">Estudios</h2>
+            <ul class="studies-list">
+              <li class="study-title">KeepCoding Web Development Master Bootcamp. Noviembre 2017</li>
+              <li class="study-title">F.P.E.G.S. Sistemas de Regulación y control automáticos. Septiembre 2012</li>
+            </ul>
+          </div>
+        </div>
+        </section>
+
+
+
+        <section id="experiencia" class="clearfix section-content">
+          <div class="experience">
+            <h2 class="text-black-h2">Experiencia</h2>
+            <p class="resume">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
 
         </section>
-        <section id="experiencia"></section>
-        <section id="sobre-mi"></section>
-
+        <section id="sobre-mi" class="clearfix">
+          <div class="about-me">
+            <h2 class="text-grey-h2">Sobre mi</h2>
+          </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -76,5 +108,6 @@
     </footer>
 
 </body>
+<script type="text/javascript" src=js/menu.js></script>
 
 </html>
