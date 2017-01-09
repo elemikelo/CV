@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600|Roboto:300,400|Pacifico" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 </head>
 
 <body>
@@ -15,12 +16,14 @@
         <div class="img-portada">
             <h1 class="name"> Luis Miguel Álvarez Maidero.</h1>
             <h3 class="description">"Full stack Developer & Automation Technician."</h3>
+            <div class="div-btn-scroll-down col-12">
+                <a href="#btn-scroll-down" id="btn-scroll-down"><img class="btn-scroll-down" src="images/icons/button-scroll-down.png"></a>
+            </div>
         </div>
-
     </header>
 
     <nav class="navbar" id="navbar-id">
-        <a href="#" class="title">Curriculum Vitae</a>
+        <div class="title">Curriculum Vitae</div>
 
         <ul class="navbar-list">
             <li class="navbar-item">
@@ -42,72 +45,127 @@
                 <a href="contact.html" class="navbar-link">CONTACTO</a>
             </li>
         </ul>
-
     </nav>
+
+    <div class="menu-contact" id="menu-contact-hide">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lm.alvarezmaidero@gmail.com"  target="_blank">
+            <img src="images/icons/email.png"  class="icon-email" alt="email">
+        </a><br>
+        <a href="https://github.com/elemikelo"  target="_blank">
+            <img src="images/icons/github-logo.png" class="icon-github" alt="github">
+        </a><br>
+        <a href="https://twitter.com/EleMikelo"  target="_blank">
+            <img src="images/icons/twitter-logo.png"  class="icon-facebook" alt="twitter">
+        </a><br>
+        <a href="https://www.facebook.com/elemikelo" target="_blank">
+            <img src="images/icons/facebook-logo.png" class="icon-facebook" alt="facebook">
+        </a><br>
+        <div class="btn-menu-contact-hide">
+            <img src="images/icons/flecha-left.png" class="icon-hide" alt="hiden">
+        </div>
+    </div>
+    <div class="menu-contact" id="menu-contact-show">
+        <div class="btn-menu-contact-show">
+            <img src="images/icons/flecha-right.png" class="icon-show" alt="show">
+        </div>
+    </div>
+
 
     <main class="container-main">
         <section id="quien-soy" class="who-am-i clearfix">
             <div class="row container section-content">
-              <div class="col-4">
-                <figure class="photo-me">
-  								<img src="images/photo.png" alt="Foto de Luis Miguel" width="400px" height="300px">
-  								<figcaption class="photo-name"></figcaption>
-  							</figure>
-              </div>
-              <div class="col-6 resume-position">
-                <h2 class="text-black-h2">Quien soy</h2>
-                <p class="resume">
-                  Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes
-                  comunicativas y analíticas.
-                  Durante mi experiencia profesional he asumido distintas responsabilidades en la toma de decisiones,
-                  aportando conocimientos
-                  y generando nuevas ideas orientadas a optimizar nuevos proyectos y procesos de puesta en marcha.
-                  Siempre abierto a nuevos retos donde mi background profesional
-                  aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.
-                </p>
-              </div>
+                <div class="col-4">
+                    <figure class="photo-me">
+                        <img src="images/photo.png" alt="Foto de Luis Miguel" width="400px" height="300px">
+                        <figcaption class="photo-name"></figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 resume-position">
+                    <h2 class="text-black-h2">Quien soy</h2>
+                    <p class="resume">
+                        Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes comunicativas y analíticas. Durante mi experiencia profesional he asumido distintas responsabilidades en la toma de decisiones, aportando conocimientos
+                        y generando nuevas ideas orientadas a optimizar nuevos proyectos y procesos de puesta en marcha. Siempre abierto a nuevos retos donde mi background profesional aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.
+                    </p>
+                </div>
             </div>
         </section>
 
 
-      <section id="estudios" class="studies clearfix">
-        <div class="row container section-content">
-          <div class="col-12">
-            <h2 class="text-black-h2">Estudios</h2>
-            <ul class="studies-list">
-              <li class="study-title">KeepCoding Web Development Master Bootcamp. Noviembre 2017</li>
-              <li class="study-title">F.P.E.G.S. Sistemas de Regulación y control automáticos. Septiembre 2012</li>
-            </ul>
-          </div>
-        </div>
+        <section id="estudios" class="studies clearfix">
+            <div class="row container section-content">
+                <div class="col-12">
+                    <h2 class="text-black-h2">Estudios</h2>
+                    <ul class="studies-list">
+                        <li class="study-title"><i class="material-icons">done</i>KeepCoding Web Development Master Bootcamp. Noviembre 2017</li>
+                        <li class="study-title"><i class="material-icons">done</i>F.P.E.G.S. Sistemas de Regulación y control automáticos. Septiembre 2012</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
+        <section id="experiencia" class="clearfix experience">
+            <div class="row container section-content">
+                <h2 class="text-black-h2">Experiencia</h2>
+                <ul class="resume-experience list-icons">
+                    <div class="col-6">
+                        <li>
+                            <i class="material-icons md-48">build</i>
+                            <p class="content-experience">Técnico de instalaciones eléctricas y electromecánicas de automatización y telecomunicaciones.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="material-icons md-48">laptop_mac</i>
+                            <p class="content-experience">Desarrollo de programas a medida para PLCs y SCADA.</p>
+                        </li>
 
+                        <li>
+                            <i class="material-icons md-48">format_list_numbered</i>
+                            <p class="content-experience">Parametrización de instrumentación y sensorería de campo.</p>
+                        </li>
+                    </div>
 
-        <section id="experiencia" class="clearfix section-content">
-          <div class="experience">
-            <h2 class="text-black-h2">Experiencia</h2>
-            <p class="resume">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-
+                    <div class="col-6">
+                        <li>
+                            <i class="material-icons md-48">check_circle</i>
+                            <p class="content-experience">Realización de puesta en marcha de instalaciones electromecánicas automatizadas.</p>
+                        </li>
+                        <li>
+                            <i class="material-icons md-48">flash_on</i>
+                            <p class="content-experience">Elaboración de esquemas eléctricos.</p>
+                        </li>
+                        <li>
+                            <i class="material-icons md-48">nature_people</i>
+                            <p class="content-experience">Obras: Depuradoras Jerez de la Fra y La Antilla, Canal de Orellana y Hospital de Vejer de la Frontera.</p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </section>
-        <section id="sobre-mi" class="clearfix">
-          <div class="about-me">
-            <h2 class="text-grey-h2">Sobre mi</h2>
-          </div>
+
+        <section id="sobre-mi" class="clearfix about-me">
+            <div class="row container section-content">
+                <h2 class="text-grey-h2">Sobre mi</h2>
+                <div class="col-6 center">
+                    <video width="480" height="360" controls="">
+                <source src="video/42.mp4" type="video/mp4">
+              </video>
+                </div>
+                <div class="col-6 container-img">
+                    <img src="images/tipo.png" class="boy-programmer" alt="photo" width="110px" height="201px">
+                    <img src="images/ideas.png" class="animation-ideas" alt="photo" width="400px" height="400px">
+                </div>
+            </div>
+            <div class="div-btn-scroll-up col-12 clearfix">
+                <a href="#btn-scroll-up" id="btn-scroll-up"><img class="btn-scroll-up" src="images/icons/button-scroll-up.png"></a>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        Todos los derechos reservados &copy; 2016 Currículum Vitae
+        Todos los derechos reservados &copy; 2017 Currículum Vitae
     </footer>
 
 </body>
 <script type="text/javascript" src=js/menu.js></script>
-
+<script type="text/javascript" src=js/menu_contact.js></script>
 </html>
