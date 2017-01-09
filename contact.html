@@ -8,26 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600|Roboto:300,400|Pacifico" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
-  	<script>
-  		function initialize() {
-  			var myLatLng = {lat: 42.762480, lng: -83.283406};
 
-  			var mapProp = {
-  				center:myLatLng,
-  				zoom:15,
-  				mapTypeId:google.maps.MapTypeId.ROADMAP
-  			};
-  			var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-  			var marker = new google.maps.Marker({
-  				position: myLatLng,
-  				map: map,
-  				title: 'Aqui estamos'
-  			});
-  		}
-  		google.maps.event.addDomListener(window, 'load', initialize);
-  	</script>
 </head>
 
 <body>
@@ -59,26 +40,27 @@
   </nav>
 
   <div class="menu-contact" id="menu-contact-hide">
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lm.alvarezmaidero@gmail.com" class="icon" target="_blank">
-      <img src="images/icons/email.png"  alt="email">
-    </a><br>
-    <a href="https://github.com/elemikelo" class="icon" target="_blank">
-      <img src="images/icons/github-logo.png" alt="github">
-    </a><br>
-    <a href="https://twitter.com/EleMikelo" class="icon" target="_blank">
-      <img src="images/icons/twitter-logo.png" alt="twitter">
-    </a><br>
-    <a href="https://www.facebook.com/elemikelo"  target="_blank">
-      <img src="images/icons/facebook-logo.png" class="icon-facebook" alt="facebook">
-    </a><br>
-    <div class="btn-menu-contact-hide">
-      <img src="images/icons/flecha-left.png" class="icon" alt="hiden">
-    </div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lm.alvarezmaidero@gmail.com"  target="_blank">
+          <img src="images/icons/email.png"  class="icon-email" alt="email">
+      </a><br>
+      <a href="https://github.com/elemikelo"  target="_blank">
+          <img src="images/icons/github-logo.png" class="icon-github" alt="github">
+      </a><br>
+      <a href="https://twitter.com/EleMikelo"  target="_blank">
+          <img src="images/icons/twitter-logo.png"  class="icon-facebook" alt="twitter">
+      </a><br>
+      <a href="https://www.facebook.com/elemikelo" target="_blank">
+          <img src="images/icons/facebook-logo.png" class="icon-facebook" alt="facebook">
+      </a><br>
+      <div class="btn-menu-contact-hide">
+          <img src="images/icons/flecha-left.png" class="icon-hide" alt="hiden">
+      </div>
   </div>
   <div class="menu-contact" id="menu-contact-show">
-    <div class="btn-menu-contact-show" "icon">
-      <img src="images/icons/flecha-right.png" alt="show">
-    </div>
+      <div class="btn-menu-contact-show">
+          <img src="images/icons/flecha-right.png" class="icon-show" alt="show">
+      </div>
+  </div>
 
   </div>
     <main class="container">
@@ -118,8 +100,8 @@
           </form>
         </div>
 
-      <div class="col-6">
-				<div id="googleMap"></div>
+      <div class="col-6-comment">
+				<h3 class="text-black-h3">Deja tu comentario aqui</h3>
 			</div>
       </section>
     </main>
@@ -129,6 +111,6 @@
 </body>
 <script type="text/javascript" src=js/contact.js></script>
 <script type="text/javascript" src=js/menu_contact.js></script>
-<script src="js/geolocation.js"></script>
+<script type="text/javascript" src="js/geolocation.js"></script>
 
 </html>
