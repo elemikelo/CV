@@ -1,11 +1,12 @@
 $(document).ready(function() {
+
     var inputsOption = $("[name='opcion_conocer']");
 
     for (var i = 0; i < inputsOption.length; i++) {
         $(inputsOption[i]).click(function(event) {
             if ($(this).val() == 'otros') {
                 $('#text').remove();
-                $('.form-radio').append('<textarea name="text" id="text" rows="10" cols="50" placeholder="Cuentamelo..." required></textarea>');
+                $('.form-radio').append('<textarea name="text" id="text" class="textarea" rows="10" cols="50" placeholder="Cuentamelo..."></textarea>');
             } else {
                 if ($('#text')) {
                     $('#text').remove();
@@ -60,28 +61,118 @@ $("form").submit(function (event) {
         email.focus();
         event.preventDefault();
         $('.alert-msg').remove();
-        $('.form-datos').append('<span class="alert-msg"> Email erroneo</span>');
+        $('#email').after('<span class="alert-msg"> Email erroneo</span>');
         return false;
     }
     if (!patternTelefono.test($('#telefono').val().trim())) {
         telefono.focus();
         event.preventDefault();
         $('.alert-msg').remove();
-        $('.form-telefono').append('<span class="alert-msg"> Teléfono erroneo</span>');
+        $('#telefono').after('<span class="alert-msg"> Teléfono erroneo</span>');
         return false;
     }
 
 
 })
 
-$("#text").on('keyup', function() {
-  var words = this.value.match(/\S+/g).length;
-  console.log(words);
-
-  if (words > 150) {
+$(document).on('keyup','.textarea', function() {
+  var counterWords = this.value.match(/\S+/g).length;
+  if (counterWords > 150) {
     var trimmed = $(this).val().split(/\s+/, 150).join(" ");
     $(this).val(trimmed + " ");
-    alert('Maximo 150 palabras')
+    $('.alert-msg').remove();
+    $('.form-radio').after('<span class="alert-msg"> * Máximo 150 palabras</span>');
+  }
+  else {
+    $('.alert-msg').remove();
   }
 });
+
+
+var comentario = $('form#enquiry textarea'),
+    contador = '',
+    contadorMax = 150,
+    minCaracteres = 2,
+    $comentarioValue = comentario.val(),
+    $comentarioLength = $comentarioValue.length,
+    button = $('#sendNewComment').hide();
+
+    $('.form-2').append('<span class="contador"></span>').append('<p class="info">Min length: <span></span></p>');
+    contador = $('span.contador');
+    contador.html(contadorMax);
+    comentario.attr('maxlength', contadorMax);
+    $('.form-2').find('p.info > span').html(minCaracteres);
+
+    comentario.keyup(function () {
+      var $this = $(this);
+      $comentarioLength = $this.val().length; //get number of characters
+      contador.html(contadorMax - $comentarioLength); //update contador
+      if ($comentarioLength > minCaracteres - 1) {
+        button.fadeIn(200);
+      } else {
+        button.fadeOut(200);
+      }
+    });
+
+///////////////////////AJAX////////////////////////////
+
+    var mensaje = $('#mensaje');
+    var comentarios = [];
+    var comentariosContainer = $('#commentsContainer');
+    var url = 'http://localhost:8000/api/';
+
+    var drawComentarios = function () {
+      comentariosContainer.empty();
+      if (comentarios == 0) {
+        comentariosContainer.append("<li>* No tienes comentarios</li>");
+      }else {
+        var contentToAdd = '';
+        for (var i = 0; i < comentarios.length; i++) {
+          contentToAdd += '<li>' + comentarios[i].comentario + '</li>';
+        }
+        comentariosContainer.append(contentToAdd);
+      }
+    }
+    drawComentarios();
+
+
+
+    var createComment = function (comment) {
+
+      var success = function (data) {
+        console.log(data);
+        $('#mensaje').val('');
+        comentarios.push(data);
+        drawComentarios();
+      }
+      var data = {'comentario': comment };
+
+      $.ajax({
+        type: 'POST',
+        url: url + 'contact',
+        data: data,
+        success: success
+      })
+    }
+    var getComentarios = function () {
+      var success = function (data) {
+        comentarios = data;
+        drawComentarios();
+      }
+
+      $.ajax({
+        type: "GET",
+        url: url + 'contact',
+        success: success
+      })
+    }
+
+    $('#sendNewComment').on('click', function (event) {
+      if ($('#mensaje').val() != '  ') {
+        event.preventDefault();
+        createComment($('#mensaje').val());
+      }
+    })
+  getComentarios();
+
 });

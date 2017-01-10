@@ -67,33 +67,38 @@
       <section class="row contact">
         <h2 class="text-black-h2">¿Quieres saber más de mi? ¡Ponte en contacto conmigo!</h2>
         <div class="col-6">
-          <form id="form-contact" class="form" name="contact-me" method="get" novalidate>
+          <form type="hidden" id="form-contact" class="form" name="contact-me" method="get" value="form1" novalidate>
 
             <div class="form-datos">
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" class="input" placeholder="Nombre">
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email" class="input"  placeholder="example@example.com" required>
-            </div>
-            <div class="form-telefono">
-              <label for="telefono">Telefono:</label>
-              <input type="text" id="telefono" name="tfn" class="input"  placeholder="Ej: 670454036" required>
+              <div class="input-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"  placeholder="Nombre">
+              </div>
+              <div class="input-form">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"  placeholder="example@example.com" required>
+              </div>
+              <div class="input-form">
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="tfn"  placeholder="Ej: 670454036" required>
+              </div>
             </div>
 
-
-            <div class="prueba">
-              <span>¿Como me has conocido?</span>
-            </div>
             <div class="form-radio">
-              <label for="instituto">Instituto</label>
-              <input type="radio" id="instituto" name="opcion_conocer" value="instituto" required>
-              <label for="universidad">Universidad</label>
-              <input type="radio" id="universidad" name="opcion_conocer" value="universidad" required>
-              <label for="otros">Otros</label>
-              <input type="radio" id="otros" name="opcion_conocer" value="otros" required><br>
+              <div class="input-form">
+                <span>¿Como me has conocido?</span>
+              </div>
+              <div class="input-form">
+                <label for="instituto">Instituto</label>
+                <input type="radio" id="instituto" name="opcion_conocer" value="instituto" required>
+                <label for="universidad">Universidad</label>
+                <input type="radio" id="universidad" name="opcion_conocer" value="universidad" required>
+                <label for="otros">Otros</label>
+                <input type="radio" id="otros" name="opcion_conocer" value="otros" required>
+              </div>
             </div>
 
-            <div class="btn-form-row">
+            <div class="input-form btn-form-row">
   						<button type="submit" id="enviar" class="button">Enviar</button>
   					</div>
 
@@ -102,6 +107,14 @@
 
       <div class="col-6-comment">
 				<h3 class="text-black-h3">Deja tu comentario aqui</h3>
+        <div>
+          <ul id="commentsContainer"></ul>
+        </div>
+        <form type="hidden" id="enquiry" class="form-2" value="form2">
+          <input type="text" name="name-comment" class="name-comment" placeholder="Name">
+          <textarea  name="message" id="mensaje" placeholder="Add your comment!"></textarea>
+          <button id='sendNewComment'>Add Comment</button>
+        </form>
 			</div>
       </section>
     </main>
@@ -111,6 +124,5 @@
 </body>
 <script type="text/javascript" src=js/contact.js></script>
 <script type="text/javascript" src=js/menu_contact.js></script>
-<script type="text/javascript" src="js/geolocation.js"></script>
 
 </html>
