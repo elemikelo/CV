@@ -168,6 +168,7 @@ a:link{
 
 .navbar:hover{
 	opacity: 1;
+	transition: 0.5s;
 }
 
 .navbar > .title{
@@ -201,6 +202,7 @@ a:link{
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover{
 	color: #FFF;
 	opacity: 0.4;
+	transition: 0.5s;
 
 }
 
@@ -388,9 +390,11 @@ ul.studies-list li{
 
 .btn-scroll-down:hover{
 	opacity: 1;
+	transition: 0.5s;
 }
 
 .btn-scroll-up:hover{
+	transition: 0.5s;
 	opacity: 1;
 }
 .btn-scroll-down{
@@ -433,7 +437,7 @@ animation: spin 15s linear infinite;*/
 	padding-top: 100px;
 	padding-left: 100px;
 	padding-right: 100px;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 }
 
 .form{
@@ -482,6 +486,7 @@ input {
 
 .icon-facebook:hover, .icon-github:hover, .icon-email:hover, .icon-twitter:hover, .icon-hide:hover, .icon-show:hover{
 	opacity: 1;
+	transition: 0.5s;
 }
 
 
@@ -571,5 +576,32 @@ form .name-comment{
 }
 
 #commentsContainer #li-comment  button {
+	margin-left: 15px;
+	border-radius: 20px;
+	background-color: rgba(255, 0, 0, 0.62);
+	text-decoration: none;
+	border: none;
+	color: #3A3E3E;
+	font-weight: bold;
 	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	}
+
+#commentsContainer #li-comment  button:hover {
+	color: white;
+}
+
+
+.loader{
+	position: relative;
+  left: 225px;
+	border: 5px solid #f3f3f3;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }

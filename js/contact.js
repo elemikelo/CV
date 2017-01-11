@@ -118,4 +118,5 @@ var comentario = $('form#enquiry textarea'),
         button.fadeOut(200);
       }
     });
+
 });

@@ -4,23 +4,52 @@ $(document).ready(function () {
 
       var mensaje = $('#mensaje');
       var nombre = $('#name');
+      var loader = $('.loader');
       var comentarios = [];
       var comentariosContainer = $('#commentsContainer');
       var url = 'http://localhost:8000/api/';
+      var ok = 0;
 
       var drawComments = function () {
         comentariosContainer.empty();
-        if (comentarios == 0) {
+
+        if (comentarios == 0 && ok == 1) {
           comentariosContainer.append("<li>* No tienes comentarios</li>");
         }else {
           var contentToAdd = '';
           for (var i = 0; i < comentarios.length; i++) {
-            contentToAdd += '<div id="li-name">' + comentarios[i].name + '</div>' + '<li id="li-comment">' + comentarios[i].comentario + '<button class="delete" data-comment-id="' + comentarios[i].id + '">Eliminar</button></li>';
+            contentToAdd += '<div id="li-name">' + comentarios[i].name + '</div>' + '<li id="li-comment">' + comentarios[i].comentario + '<button class="delete" data-comment-id="' + comentarios[i].id + '">&times;</button></li>';
           }
           comentariosContainer.append(contentToAdd);
         }
       }
       drawComments();
+
+    ///////////////////////GET////////////////////////////
+
+
+      var getComentarios = function () {
+        var success = function (data) {
+          comentarios = data;
+          drawComments();
+        }
+
+        var complete = function () {
+          loader.hide();
+           ok = 1;
+           drawComments();
+        }
+
+        $.ajax({
+          type: "GET",
+          url: url + 'contact',
+          success: success,
+          complete: complete
+        })
+        .fail(function (error) {
+    			console.error("Error al cargar comentarios.", error);
+    		});
+      }
 
 ///////////////////////POST////////////////////////////
 
@@ -31,6 +60,7 @@ $(document).ready(function () {
           mensaje.val('');
           nombre.val('');
 
+
           comentarios.push(data);
           drawComments();
         }
@@ -38,36 +68,24 @@ $(document).ready(function () {
           'comentario': comment,
           'name': name
        };
+       var complete = function () {
+         alert('Mensaje enviado, gracias')
+       }
+
 
         $.ajax({
           type: 'POST',
           url: url + 'contact',
           data: data,
-          success: success
+          success: success,
+          complete: complete
+
         })
         .fail(function (error) {
     			console.error("Error al enviar comentario.", error);
     		});
       }
 
-///////////////////////GET////////////////////////////
-
-
-      var getComentarios = function () {
-        var success = function (data) {
-          comentarios = data;
-          drawComments();
-        }
-
-        $.ajax({
-          type: "GET",
-          url: url + 'contact',
-          success: success
-        })
-        .fail(function (error) {
-    			console.error("Error al cargar comentarios.", error);
-    		});
-      }
 
 ///////////////////////DELETE////////////////////////////
 
@@ -108,5 +126,5 @@ $(document).ready(function () {
 
     setTimeout(function() {
       getComentarios();
-    }, 1);
+    }, 1500);
 });

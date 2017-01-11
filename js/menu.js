@@ -54,6 +54,15 @@ $(document).ready(function() {
       }
   }
 
+  $("#navbar-id").hover(function(){
+        $(this).css("opacity", "1");
+        }, function(){
+          if (window.pageYOffset < 242) {
+            $(this).css("opacity", "0.5")
+            $(this).css("transition", "0.5s");
+          }
+    });
+
 //CHANGE SELECTION NAVBAR
 
   var navbarLink = $('.navbar-link');
