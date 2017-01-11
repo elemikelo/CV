@@ -75,16 +75,19 @@ $("form").submit(function (event) {
 
 })
 
-$(document).on('keyup','.textarea', function() {
-  var counterWords = this.value.match(/\S+/g).length;
-  if (counterWords > 150) {
-    var trimmed = $(this).val().split(/\s+/, 150).join(" ");
-    $(this).val(trimmed + " ");
-    $('.alert-msg').remove();
-    $('.form-radio').after('<span class="alert-msg"> * Máximo 150 palabras</span>');
-  }
-  else {
-    $('.alert-msg').remove();
+$(document).on('keypress','.textarea', function() {
+  if ($('#text').val() != '') {
+
+    var counterWords = this.value.match(/\S+/g).length;
+    if (counterWords > 150) {
+      var trimmed = $(this).val().split(/\s+/, 150).join(" ");
+      $(this).val(trimmed + " ");
+      $('.alert-msg').remove();
+      $('.form-radio').after('<span class="alert-msg"> * Máximo 150 palabras</span>');
+    }
+    else {
+      $('.alert-msg').remove();
+    }
   }
 });
 
@@ -117,6 +120,7 @@ var comentario = $('form#enquiry textarea'),
 ///////////////////////AJAX////////////////////////////
 
     var mensaje = $('#mensaje');
+    var nombre = $('#name');
     var comentarios = [];
     var comentariosContainer = $('#commentsContainer');
     var url = 'http://localhost:8000/api/';
@@ -128,24 +132,27 @@ var comentario = $('form#enquiry textarea'),
       }else {
         var contentToAdd = '';
         for (var i = 0; i < comentarios.length; i++) {
-          contentToAdd += '<li>' + comentarios[i].comentario + '</li>';
+          contentToAdd += '<div id="li-name">' + comentarios[i].name + '</div>' + '<li id="li-comment">' + comentarios[i].comentario + '<button class="delete" data-task-id="' + comentarios[i].id + '">Eliminar</button></li>';
         }
         comentariosContainer.append(contentToAdd);
       }
     }
     drawComentarios();
 
-
-
-    var createComment = function (comment) {
+    var createComment = function (comment,name) {
 
       var success = function (data) {
         console.log(data);
-        $('#mensaje').val('');
+        mensaje.val('');
+        nombre.val('');
+
         comentarios.push(data);
         drawComentarios();
       }
-      var data = {'comentario': comment };
+      var data = {
+        'comentario': comment,
+        'name': name
+     };
 
       $.ajax({
         type: 'POST',
@@ -168,9 +175,9 @@ var comentario = $('form#enquiry textarea'),
     }
 
     $('#sendNewComment').on('click', function (event) {
-      if ($('#mensaje').val() != '  ') {
+      if (mensaje.val() != '  ') {
         event.preventDefault();
-        createComment($('#mensaje').val());
+        createComment(mensaje.val(), nombre.val());
       }
     })
   getComentarios();
