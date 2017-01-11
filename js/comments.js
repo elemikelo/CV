@@ -73,19 +73,26 @@ $(document).ready(function () {
 
 
       var deleteComment = function(id) {
+        var success = function(data) {
+          comentarios = $.grep(comentarios, function(item){ //GREP: BUSCA Y FILTRA
+    				return item.id != id;
+          })
+          drawComments();
+        }
+
     		$.ajax({
     			type: "DELETE",
-    			url: url + "contact/" + id
+    			url: url + "contact/" + id,
+          success: success
     		})
-    		.done(function(data){
-    			comentarios = $.grep(comentarios, function(item){ //GREP: BUSCA Y FILTRA
-    				return item.id != id;
-    			});
-    			drawComments();
+
+        .fail(function(error) {
+    			console.error("Error eliminando comentario", error);
     		})
     	}
 
-  ////////// EVENTS ////////////////////
+///////////////////////EVENTS////////////////////////////
+
 
       $('#sendNewComment').on('click', function (event) {
         if (mensaje.val() != '  ') {
@@ -99,5 +106,7 @@ $(document).ready(function () {
         deleteComment(id);
       });
 
-    getComentarios();
+    setTimeout(function() {
+      getComentarios();
+    }, 1);
 });
