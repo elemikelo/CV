@@ -74,6 +74,7 @@ $("form").submit(function (event) {
 
 
 })
+//////// DINAMIC TEXTAREA WORDS VALIDATOR ///////
 
 $(document).on('keypress','.textarea', function() {
   if ($('#text').val() != '') {
@@ -91,6 +92,7 @@ $(document).on('keypress','.textarea', function() {
   }
 });
 
+/////// TEXTAREA characters validator///////////
 
 var comentario = $('form#enquiry textarea'),
     contador = '',
@@ -116,70 +118,4 @@ var comentario = $('form#enquiry textarea'),
         button.fadeOut(200);
       }
     });
-
-///////////////////////AJAX////////////////////////////
-
-    var mensaje = $('#mensaje');
-    var nombre = $('#name');
-    var comentarios = [];
-    var comentariosContainer = $('#commentsContainer');
-    var url = 'http://localhost:8000/api/';
-
-    var drawComentarios = function () {
-      comentariosContainer.empty();
-      if (comentarios == 0) {
-        comentariosContainer.append("<li>* No tienes comentarios</li>");
-      }else {
-        var contentToAdd = '';
-        for (var i = 0; i < comentarios.length; i++) {
-          contentToAdd += '<div id="li-name">' + comentarios[i].name + '</div>' + '<li id="li-comment">' + comentarios[i].comentario + '<button class="delete" data-task-id="' + comentarios[i].id + '">Eliminar</button></li>';
-        }
-        comentariosContainer.append(contentToAdd);
-      }
-    }
-    drawComentarios();
-
-    var createComment = function (comment,name) {
-
-      var success = function (data) {
-        console.log(data);
-        mensaje.val('');
-        nombre.val('');
-
-        comentarios.push(data);
-        drawComentarios();
-      }
-      var data = {
-        'comentario': comment,
-        'name': name
-     };
-
-      $.ajax({
-        type: 'POST',
-        url: url + 'contact',
-        data: data,
-        success: success
-      })
-    }
-    var getComentarios = function () {
-      var success = function (data) {
-        comentarios = data;
-        drawComentarios();
-      }
-
-      $.ajax({
-        type: "GET",
-        url: url + 'contact',
-        success: success
-      })
-    }
-
-    $('#sendNewComment').on('click', function (event) {
-      if (mensaje.val() != '  ') {
-        event.preventDefault();
-        createComment(mensaje.val(), nombre.val());
-      }
-    })
-  getComentarios();
-
 });
