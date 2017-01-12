@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('.delay-icons').hide();
+  $('.delay-resume').hide();
+  $('.delay-img').hide();
+
 
   // scroll
 
@@ -12,6 +16,11 @@ $(document).ready(function() {
   }
 
   $(window).scroll(function() {
+    if (window.pageYOffset > 0) {
+        $('.delay-resume').show(1000);
+        $('.delay-img').show(1000);
+      }
+
     if (window.pageYOffset <= offsetQuienSoy.top-50) {
         deleteActiveClass();
         $("a[href$='#']").attr('class', 'navbar-link active');
@@ -23,6 +32,7 @@ $(document).ready(function() {
     if (window.pageYOffset >= offSetEstudios.top-50) {
         deleteActiveClass();
         $("a[href$='estudios']").attr('class', 'navbar-link active');
+        $('.delay-icons').show(1000);
       }
     if (window.pageYOffset >= offSetExperiencia.top-50) {
         deleteActiveClass();
@@ -32,7 +42,14 @@ $(document).ready(function() {
         deleteActiveClass();
         $("a[href$='sobre-mi']").attr('class', 'navbar-link active');
     }
+
+
+
+
+
   });
+
+
 
 //BUTTON SCROLL DOWN-UP
 

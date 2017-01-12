@@ -82,7 +82,71 @@ a:link{
 	}
 }
 
+/******** IE *******/
 
+@-ms-keyframes tada {
+  0% {
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-ms-keyframes wobble {
+	0% {
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	15% {
+		-ms-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+		transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+	}
+
+	30% {
+		-ms-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+		transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+	}
+
+	45% {
+		-ms-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+	}
+
+	60% {
+		-ms-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+	}
+
+	75% {
+		-ms-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+		transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+	}
+
+	100% {
+		-ms-transform: none;
+		transform: none;
+	}
+}
 
 .text-black-h2{
 	font-family: "Open Sans", sans-serif;
@@ -139,6 +203,9 @@ a:link{
 	-webkit-animation-name: wobble;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-duration: 3s;
+	-ms-animation-name: wobble;
+	-ms-animation-timing-function: linear;
+	-ms-animation-duration: 3s;
  }
 
 
@@ -152,6 +219,9 @@ a:link{
 	-webkit-animation-name: wobble;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-duration: 3s;
+	-ms-animation-name: wobble;
+	-ms-animation-timing-function: linear;
+	-ms-animation-duration: 3s;
 	}
 
 .navbar{
@@ -260,6 +330,10 @@ a:link{
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-duration: 3s;
+	-ms-animation-name: tada;
+	-ms-animation-timing-function: linear;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-duration: 3s;
 
 }
 
