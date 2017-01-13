@@ -1,7 +1,18 @@
 $(document).ready(function() {
-  $('.delay-icons').hide();
+  //$('.delay-icons').hide();
   $('.delay-resume').hide();
   $('.delay-img').hide();
+
+  //CHANGE SELECTION NAVBAR
+
+  var navbarLink = $('.navbar-link');
+  for (var i = 0; i < navbarLink.length; i++) {
+      navbarLink[i].addEventListener('click', function(event) {
+            deleteActiveClass();
+            var ayuda =  window.pageYOffset + 10;
+            $(this).attr('class', 'navbar-link active');
+          })
+      };
 
 
   // scroll
@@ -32,7 +43,9 @@ $(document).ready(function() {
     if (window.pageYOffset >= offSetEstudios.top-50) {
         deleteActiveClass();
         $("a[href$='estudios']").attr('class', 'navbar-link active');
-        $('.delay-icons').show(1000);
+        //$('.delay-icons').show();
+
+
       }
     if (window.pageYOffset >= offSetExperiencia.top-50) {
         deleteActiveClass();
@@ -42,13 +55,7 @@ $(document).ready(function() {
         deleteActiveClass();
         $("a[href$='sobre-mi']").attr('class', 'navbar-link active');
     }
-
-
-
-
-
   });
-
 
 
 //BUTTON SCROLL DOWN-UP
@@ -80,14 +87,5 @@ $(document).ready(function() {
           }
     });
 
-//CHANGE SELECTION NAVBAR
 
-  var navbarLink = $('.navbar-link');
-  for (var i = 0; i < navbarLink.length; i++) {
-      navbarLink[i].addEventListener('click', function(event) {
-            deleteActiveClass();
-            var ayuda =  window.pageYOffset + 10;
-            $(this).attr('class', 'navbar-link active');
-          })
-      };
 });
