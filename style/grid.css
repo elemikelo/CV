@@ -36,7 +36,7 @@
 }
 
 .col-4 {
-	width: calc(calc(100% / 12) * 4);
+	width: 33,3333333333%;
 	float: left;
 	display: inline-block;
 }
