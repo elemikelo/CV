@@ -15,6 +15,15 @@ a:link{
 	text-decoration: none;
 }
 
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes opacity {
+	0% { opacity: 0; }
+	100% {opacity: 1;}
+}
+
 @keyframes spin {
 	0% {transform: rotate(0deg); }
 	100% {transform: rotate(360deg);}
@@ -410,6 +419,8 @@ ul.studies-list li{
 	left:  87px;
 	top:100px;
 	margin: 0;
+	/*animation: opacity 3s linear infinite;*/
+
 }
 
 .png-studies-2{
@@ -421,8 +432,8 @@ ul.studies-list li{
 	position: relative;
 	left: 87px;
 	top:100px;
-
 	margin: 0;
+	/*animation: opacity 3s linear infinite;*/
 }
 
 .content-studies{
@@ -712,4 +723,9 @@ form .name-comment{
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+
+.delay-icons{
+	/*animation: blink 1s linear infinite;*/
+	 -webkit-transition: background-position .3s ease;
 }

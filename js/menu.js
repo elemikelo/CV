@@ -1,7 +1,10 @@
 $(document).ready(function() {
-  //$('.delay-icons').hide();
-  $('.delay-resume').hide();
-  $('.delay-img').hide();
+  $('.delay-resume').css('visibility', 'hidden');
+  $('.delay-img').css('visibility', 'hidden');
+  $(".png-studies-1").css('visibility', 'hidden');
+  $(".png-studies-2").css('visibility', 'hidden');
+  $(".delay-icons").css('visibility', 'hidden');
+
 
   //CHANGE SELECTION NAVBAR
 
@@ -27,9 +30,12 @@ $(document).ready(function() {
   }
 
   $(window).scroll(function() {
+    console.log('HOLA');
     if (window.pageYOffset > 0) {
-        $('.delay-resume').show(1000);
-        $('.delay-img').show(1000);
+        $('.delay-resume').css('visibility', 'visible');
+        $('.delay-img').css('visibility', 'visible');
+        $('.delay-resume').css('animation', 'opacity 2s linear');
+        $('.delay-img').css('animation', 'opacity 2s linear');
       }
 
     if (window.pageYOffset <= offsetQuienSoy.top-50) {
@@ -39,17 +45,26 @@ $(document).ready(function() {
     if (window.pageYOffset >= offsetQuienSoy.top-50 ) {
         deleteActiveClass();
         $("a[href$='quien-soy']").attr('class', 'navbar-link active');
+        $(".png-studies-1").css('visibility', 'visible');
+        $(".png-studies-2").css('visibility', 'visible');
+        $(".png-studies-1").css('animation', 'opacity 3s linear');
+        $(".png-studies-2").css('animation', 'opacity 3s linear');
+
+
+
       }
     if (window.pageYOffset >= offSetEstudios.top-50) {
         deleteActiveClass();
         $("a[href$='estudios']").attr('class', 'navbar-link active');
-        //$('.delay-icons').show();
+
 
 
       }
     if (window.pageYOffset >= offSetExperiencia.top-50) {
         deleteActiveClass();
         $("a[href$='experiencia']").attr('class', 'navbar-link active');
+        $('.delay-icons').css('visibility', 'visible');
+        $('.delay-icons').css('animation', 'opacity 2s linear');
       }
     if (window.pageYOffset >= offSetSobreMi.top-50) {
         deleteActiveClass();
