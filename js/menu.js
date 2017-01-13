@@ -29,6 +29,7 @@ $(document).ready(function() {
   }
 
   $(window).scroll(function() {
+    console.log(window.pageYOffset);
     if (window.pageYOffset > 0) {
         $('#quien-soy').css('visibility', 'visible');
         $('#quien-soy').css('animation', 'opacity 2s linear')
@@ -60,9 +61,13 @@ $(document).ready(function() {
     if (window.pageYOffset >= offSetExperiencia.top-50) {
         deleteActiveClass();
         $("a[href$='experiencia']").attr('class', 'navbar-link active');
+      }
+
+    if (window.pageYOffset >= 1093) {
         $('.delay-icons').css('visibility', 'visible');
         $('.delay-icons').css('animation', 'opacity 2s linear');
       }
+
     if (window.pageYOffset >= offSetSobreMi.top-50) {
         deleteActiveClass();
         $("a[href$='sobre-mi']").attr('class', 'navbar-link active');
