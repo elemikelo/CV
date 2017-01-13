@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  $('.delay-resume').css('visibility', 'hidden');
-  $('.delay-img').css('visibility', 'hidden');
+  $('#quien-soy').css('visibility', 'hidden');
   $(".png-studies-1").css('visibility', 'hidden');
   $(".png-studies-2").css('visibility', 'hidden');
   $(".delay-icons").css('visibility', 'hidden');
@@ -30,12 +29,10 @@ $(document).ready(function() {
   }
 
   $(window).scroll(function() {
-    console.log('HOLA');
     if (window.pageYOffset > 0) {
-        $('.delay-resume').css('visibility', 'visible');
-        $('.delay-img').css('visibility', 'visible');
-        $('.delay-resume').css('animation', 'opacity 2s linear');
-        $('.delay-img').css('animation', 'opacity 2s linear');
+        $('#quien-soy').css('visibility', 'visible');
+        $('#quien-soy').css('animation', 'opacity 2s linear')
+
       }
 
     if (window.pageYOffset <= offsetQuienSoy.top-50) {
