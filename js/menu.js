@@ -117,5 +117,7 @@ $(document).ready(function() {
       number_img = 1;
     }
       $(".img-portada").css('background-image','url("../Practica HTML5,CSS3,JS/images/portada'+ number_img +'.jpg")');
+      $(".img-portada").css('background-image','url("../images/portada'+ number_img +'.jpg")');
+
     })
 });
