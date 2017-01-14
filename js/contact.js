@@ -118,5 +118,15 @@ var comentario = $('form#enquiry textarea'),
         button.fadeOut(200);
       }
     });
+////////////////////////////////////////////////////
+    var navbarLink = $('.navbar-link');
+    for (var i = 0; i < navbarLink.length; i++) {
+        navbarLink[i].addEventListener('click', function(event) {
+              deleteActiveClass();
+              var ayuda =  window.pageYOffset + 10;
+              $(this).attr('class', 'navbar-link active');
+            })
+        };
+
 
 });

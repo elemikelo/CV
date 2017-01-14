@@ -5,6 +5,9 @@ $(document).ready(function() {
   $(".delay-icons").css('visibility', 'hidden');
 
 
+  //
+
+
   //CHANGE SELECTION NAVBAR
 
   var navbarLink = $('.navbar-link');
@@ -104,5 +107,15 @@ $(document).ready(function() {
           }
     });
 
+  ///// COLOUR  CHANGES PORTADA /////
 
+  var number_img = 1;
+
+ $(document).keypress(function(){
+    number_img++;
+    if (number_img > 4) {
+      number_img = 1;
+    }
+      $(".img-portada").css('background-image','url("../Practica HTML5,CSS3,JS/images/portada'+ number_img +'.jpg")');
+    })
 });
