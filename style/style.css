@@ -602,7 +602,7 @@ input {
 	opacity: 0.4;
 }
 
-.icon-facebook:hover, .icon-github:hover, .icon-email:hover, .icon-twitter:hover, .icon-hide:hover, .icon-show:hover{
+.icon-facebook:hover, .icon-github:hover, .icon-email:hover, .icon-twitter:hover, .icon-hide:hover,.icon-linkedin:hover, .icon-show:hover{
 	opacity: 1;
 	transition: 0.5s;
 }
