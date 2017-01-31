@@ -598,7 +598,7 @@ input {
   border-radius: 7px;
 }
 
-.icon-facebook, .icon-github, .icon-email, .icon-twitter, .icon-hide, .icon-show{
+.icon-facebook, .icon-github, .icon-email, .icon-twitter, .icon-hide, .icon-linkedin, .icon-show{
 	opacity: 0.4;
 }
 
@@ -709,7 +709,7 @@ form .design-input-2{
 #commentsContainer #li-comment  button {
 	margin-left: 15px;
 	border-radius: 20px;
-	background-color: rgba(255, 0, 0, 0.62);
+	background-color: #ff0000;
 	text-decoration: none;
 	border: none;
 	color: #3A3E3E;
