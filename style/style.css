@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 }
 
+
 html {
 	height: 100%;
 }
@@ -471,7 +472,14 @@ ul.studies-list li{
 
 .list-icons li{
 	margin: 0 0 60px;
-	display: block;
+	display: flex;
+}
+.new-icons{
+	display: flex;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 0;
 }
 
 .contact-icons li{
@@ -480,7 +488,8 @@ ul.studies-list li{
 }
 .content-experience{
 	width: 100%;
-	padding-left: 80px;
+	padding-left: 20px;
+	margin-top: 0;
 }
 
 .menu-contact > .icon:hover{
