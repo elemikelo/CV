@@ -211,6 +211,7 @@ a:link{
   font-weight: 300;
   font-style: normal;
   top: 280px;
+	text-shadow: rgb(20, 3, 3) 3px 4px 3px;
 	-webkit-animation-name: wobble;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-duration: 3s;
@@ -227,6 +228,7 @@ a:link{
   text-align: center;
   color: #FFF;
   top: 270px;
+	text-shadow: rgb(20, 3, 3) 2px 2px 1px;
 	-webkit-animation-name: wobble;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-duration: 3s;
