@@ -1,9 +1,4 @@
 $(document).ready(function() {
-  $('#quien-soy').css('visibility', 'hidden');
-  $(".png-studies-1").css('visibility', 'hidden');
-  $(".png-studies-2").css('visibility', 'hidden');
-  $(".delay-icons").css('visibility', 'hidden');
-
   //CHANGE SELECTION NAVBAR
 
   var navbarLink = $('.navbar-link');
