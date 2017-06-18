@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /contact.html
+Sitemap: http://kylo.rockstardevops.com/sitemap.xml

@@ -4,10 +4,6 @@ $(document).ready(function() {
   $(".png-studies-2").css('visibility', 'hidden');
   $(".delay-icons").css('visibility', 'hidden');
 
-
-  //
-
-
   //CHANGE SELECTION NAVBAR
 
   var navbarLink = $('.navbar-link');
@@ -109,7 +105,7 @@ $(document).ready(function() {
 
   ///// COLOUR  CHANGES PORTADA /////
 
-  var number_img = 1;
+  // var number_img = 1;
 
  // $(document).keypress(function(){
  //    number_img++;

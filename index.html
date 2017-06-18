@@ -1,75 +1,125 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es-ES" prefix="og: http://ogp.me/ns#" ⚡>
 <head>
     <meta charset="utf-8">
-    <title>Currículum</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/grid.css">
+    <!-- library amp and google amp-analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curriculum</title>
+    <meta name="description" content="Esta web contiene el CV personal de Luis M en las que se destaca  principalmente su background  profesional a lo largo de su etapa en el desarollo web.">
+    <link rel="canonical" href="http://kylo.rockstardevops.com/">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="full stack developer, full stack">
+    <meta name="author" content="Luis Miguel Alvarez">
+    <meta name="owner" content="Luis Miguel Alvarez">
+    <link rel="stylesheet" type="text/css" href="style/all.min.css">
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600|Roboto:300,400|Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+    <link type="image/x-icon" href="images/favicon.ico" rel="shortcut icon" />
+    <!-- open graph  data -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Full stack Developer & Automation Technician." />
+    <meta property="og:url" content="http://kylo.rockstardevops.com/" />
+    <meta property="og:description" content="Esta web contiene el CV personal de Luis M en las que se destaca  principalmente su background  profesional a lo largo de su etapa en el desarollo web."/>
+    <meta property="og:image" content="http://kylo.rockstardevops.com/images/foto-luismiguel.png" />
+    <!-- twitter cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="http://kylo.rockstardevops.com/">
+    <meta name="twitter:title" content="Full stack Developer & Automation Technician.">
+    <meta name="twitter:description" content="Esta web contiene el CV personal de Luis M en las que se destaca  principalmente su background  profesional a lo largo de su etapa en el desarollo web.">
+
+    <!-- style amp -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script type="application/ld+json">
+    [{
+        "@context": "http://schema.org/",
+        "@type": "schema:Course",
+        "schema:courseCode": "",
+        "schema:name": "Sistemas de Regulación y control automáticos.",
+        "description": "Formación profesional en automatización de sistemas y robótica.",
+        "schema:provider": {
+          "@type": "schema:CollegeOrUniversity",
+          "schema:name": "Instituto Santiago Apostol",
+          "url": "http://www.santiagoapostol.net/"
+        }
+      },
+      {
+        "@context": "http://schema.org/",
+        "@type": "schema:Course",
+        "schema:courseCode": "",
+        "schema:name": "Web Master Bootcamp",
+        "url": "https://keepcoding.io/es/keepcoding-web-development-master-bootcamp/",
+        "description": "Máster especializado en desarrollo web.",
+        "schema:provider": {
+          "@type": "schema:CollegeOrUniversity",
+          "schema:name": "Keepcoding",
+          "url": "http://www.keepcoding.io/es/"
+        }
+      }]
+
+    </script>
 </head>
 
 <body>
     <header class="header">
-        <div class="img-portada">
-            <h1 class="name"> Luis Miguel Álvarez Maidero.</h1>
-            <h3 class="description">"Full stack Developer & Automation Technician."</h3>
+        <div class="img-portada" itemscope itemtype="http://schema.org/Person">
+            <h1 class="job" itemprop="jobTitle">Full stack Developer & Automation Technician.</h1>
+            <h3 class="name" itemprop="name">"Luis Miguel Álvarez Maidero."</h3>
             <div class="div-btn-scroll-down col-12">
-                <a href="#btn-scroll-down" id="btn-scroll-down"><img class="btn-scroll-down" src="images/icons/button-scroll-down.png"></a>
+                <a href="#btn-scroll-down" id="btn-scroll-down"><img class="btn-scroll-down" src="images/icons/button-scroll-down.png" alt="icono scroll hacia abajo" width="30" height="19"></a>
             </div>
         </div>
     </header>
 
     <nav class="navbar" id="navbar-id">
         <div class="title">Curriculum Vitae</div>
-
         <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="#" class="navbar-link active">PORTADA</a>
+                <a href="#" class="navbar-link">PORTADA</a>
             </li>
             <li class="navbar-item">
-                <a href="#quien-soy" class="navbar-link">QUIEN SOY</a>
+                <a href="index.html#quien-soy" class="navbar-link">QUIEN SOY</a>
             </li>
             <li class="navbar-item">
-                <a href="#estudios" class="navbar-link">ESTUDIOS</a>
+                <a href="index.html#estudios" class="navbar-link">ESTUDIOS</a>
             </li>
             <li class="navbar-item">
-                <a href="#experiencia" class="navbar-link">CONOCIMIENTOS</a>
+                <a href="index.html#experiencia" class="navbar-link">CONOCIMIENTOS</a>
             </li>
             <li class="navbar-item">
-                <a href="#sobre-mi" class="navbar-link">SOBRE MI</a>
+                <a href="index.html#sobre-mi" class="navbar-link">SOBRE MI</a>
             </li>
             <li class="navbar-item">
-                <a href="contact.html" class="navbar-link">CONTACTO</a>
+                <a href="contact.html" class="navbar-link active">CONTACTO</a>
             </li>
         </ul>
     </nav>
 
     <div class="menu-contact" id="menu-contact-hide">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lm.alvarezmaidero@gmail.com"  target="_blank">
-            <img src="images/icons/email.png"  class="icon-email" title="email">
+            <img src="images/icons/email.png"  class="icon-email" title="email" alt="Icono email" width="32" height="32">
         </a><br>
         <a href="https://github.com/elemikelo"  target="_blank">
-            <img src="images/icons/github-logo.png" class="icon-github" title="github">
+            <img src="images/icons/github-logo.png" class="icon-github" title="github" alt="Icono github" width="32" height="32">
         </a><br>
         <a href="https://twitter.com/EleMikelo"  target="_blank">
-            <img src="images/icons/twitter-logo.png"  class="icon-twitter" title="twitter">
+            <img src="images/icons/twitter-logo.png"  class="icon-twitter" title="twitter" alt="Icono twitter" width="32" height="32">
         </a><br>
         <a href="https://www.facebook.com/elemikelo" target="_blank">
-            <img src="images/icons/facebook-logo.png" class="icon-facebook" title="facebook">
+            <img src="images/icons/facebook-logo.png" class="icon-facebook" title="facebook" alt="Icono facebook" width="32" height="32">
         </a><br>
         <a href="https://www.linkedin.com/in/luis-miguel-alvarez/" target="_blank">
-            <img src="images/icons/linkedin-logo.png" class="icon-linkedin" title="linkedin">
+            <img src="images/icons/linkedin-logo.png" class="icon-linkedin" title="linkedin" alt="Icono linkedin" width="32" height="32">
         </a><br>
         <div class="btn-menu-contact-hide">
-            <img src="images/icons/flecha-left.png" class="icon-hide" alt="hiden">
+            <img src="images/icons/flecha-left.png" class="icon-hide" alt="hiden" width="18" height="12">
         </div>
     </div>
     <div class="menu-contact" id="menu-contact-show">
         <div class="btn-menu-contact-show">
-            <img src="images/icons/flecha-right.png" class="icon-show" alt="show">
+            <img src="images/icons/flecha-right.png" class="icon-show" alt="show" width="18" height="12">
         </div>
     </div>
 
@@ -77,18 +127,15 @@
     <main class="container-main">
         <section id="quien-soy" class="who-am-i clearfix">
             <div class="row container section-content">
-                <div class="col-4">
+                <div class="col-4" itemscope itemtype="http://schema.org/Person">
                     <figure class="photo-me delay-img">
-                        <img src="images/photo.png"  alt="Foto de Luis Miguel" width="400px" height="300px">
+                        <img itemprop="image" src="images/foto-luismiguel.png"  alt="Foto de Luis Miguel" width="400" height="300">
                         <figcaption class="photo-name"></figcaption>
                     </figure>
                 </div>
-                <div class="col-6 resume-position">
+                <div class="col-6 resume-position" itemscope itemtype="http://schema.org/Person">
                     <h2 class="text-black-h2">Quien soy</h2>
-                    <p class="resume delay-resume">
-                        Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes comunicativas y analíticas. Durante mi experiencia profesional he asumido distintas responsabilidades en la toma de decisiones, aportando conocimientos
-                        y generando nuevas ideas orientadas a optimizar nuevos proyectos y procesos de puesta en marcha. Siempre abierto a nuevos retos donde mi background profesional aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.
-                    </p>
+                    <p class="resume delay-resume" itemprop="description">Profesional creativo con iniciativa y resolutivo. Perfil altamente cualificado con grandes aptitudes comunicativas y analíticas. Durante mi experiencia <b>profesional</b> he asumido distintas responsabilidades en la toma de decisiones, aportando conocimientos y generando nuevas ideas orientadas a <b>optimizar</b> nuevos proyectos y procesos de puesta en marcha. Siempre abierto a nuevos retos donde mi <b>background profesional</b> aporten un valor añadido a los distintos proyectos dónde pueda involucrarme.</p>
                 </div>
             </div>
         </section>
@@ -102,8 +149,8 @@
                   <div class="content-studies">
                     <h2 class="text-black-h2">Estudios</h2>
                     <ul class="studies-list">
-                        <li class="study-title"><i class="material-icons">done</i>KeepCoding Web Development Master Bootcamp. Noviembre 2017</li>
-                        <li class="study-title"><i class="material-icons">done</i>F.P.E.G.S. Sistemas de Regulación y control automáticos. Septiembre 2012</li>
+                        <li class="study-title">KeepCoding <b>Web Development</b> Master Bootcamp. Noviembre 2017</li>
+                        <li class="study-title">F.P.E.G.S. Sistemas de Regulación y control <b>automáticos</b>. Septiembre 2012</li>
                     </ul>
                   </div>
                 </div>
@@ -116,57 +163,58 @@
         <section id="experiencia" class="clearfix experience">
             <div class="row container section-content">
                 <h2 class="text-black-h2">Conocimientos</h2>
-                <ul class="resume-experience list-icons">
-                    <div class="col-6 delay-icons">
+                <div class="resume-experience list-icons">
+                    <ul class="col-6 delay-icons">
                         <li class="new-icons">
-                            <img src="images/mean.png" alt="Image Mean" width="48px" height="52px">
-                            <p class="content-experience">MEAN & Django : JavaScript, Python, Express, Angular, MongoDB, Django.
+                            <img src="images/mean.png" alt="Imagen logo Mean"  width="48" height="52">
+                            <p class="content-experience"><b>MEAN & Django</b> : JavaScript, Python, Express, Angular, MongoDB, Django.
                             </p>
                         </li>
                         <li class="new-icons">
-                            <img src="images/db.png" alt="Image Data base" width="48px" height="48px">
-                            <p class="content-experience">Data Base : PostgreSQL, MongoDB, Redis, ElasticSearch.</p>
+                            <img src="images/db.png" alt="Imagen logo base de datos"  width="48" height="48">
+                            <p class="content-experience"><b>Data Base</b> : PostgreSQL, MongoDB, Redis, ElasticSearch.</p>
                         </li>
 
                         <li class="new-icons">
-                          <img src="images/css.png" alt="Image Interface design" width="48px" height="48px">
-                          <p class="content-experience">Interface design : CSS3, Responsive Design, HTML5, Task Automation with Gulp.</p>
+                          <img src="images/css.png" alt="Imagen logo Interface design" width="48" height="48">
+                          <p class="content-experience"><b>Interface design</b> : CSS3, Responsive Design, HTML5, Task Automation with Gulp.</p>
                         </li>
-                    </div>
+                    </ul>
 
-                    <div class="col-6 delay-icons">
+                    <ul class="col-6 delay-icons">
                         <li class="new-icons">
-                            <img src="images/api.png" alt="Image Api" width="48px" height="48px">
-                            <p class="content-experience">Microservices & REST : Celery, RabbitMQ, APIs REST, Real-time web with Node.js.</p>
+                            <img src="images/api.png" alt="Imagen logo Api" width="48" height="48">
+                            <p class="content-experience"><b>Microservices & REST</b> : Celery, RabbitMQ, APIs REST, Real-time web with Node.js.</p>
                         </li>
                         <li class="new-icons">
-                            <div><img src="images/scrum.png" alt="Image Scrum" width="48px" height="48px"></div>
-                            <p class="content-experience">SCRUM & Agile : SCRUM, Agile, TDD.</p>
+                            <div><img src="images/scrum.png" alt="Imagen logo Scrum" width="48" height="48"></div>
+                            <p class="content-experience"><b>SCRUM & Agile</b> : SCRUM, Agile, TDD.</p>
                         </li>
                         <li class="new-icons">
-                            <img src="images/seo.png" alt="Image SEO" width="48px" height="35px">
-                            <p class="content-experience">Findability : SEO, Information architecture, UX, Analytics, Tests A/B.</p>
+                            <img src="images/seo.png" alt="Imagen logo SEO" width="48" height="35">
+                            <p class="content-experience"><b>Findability</b> : SEO, Information architecture, UX, Analytics, Tests A/B.</p>
                         </li>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="sobre-mi" class="clearfix about-me">
-            <div class="row container section-content">
+            <div class="row container section-content" itemscope itemtype="http://schema.org/Person">
                 <h2 class="text-white-h2">Sobre mi</h2>
+                <p class="text-about-me"  itemprop="description">Actualmente me encuentro cursando un master especializado en desarrollo web que me permita seguir creciendo en el ámbito profesional. Entusiasta, con iniciativa y apasionado. En búsqueda de nuevos retos que me permitan aplicar todo mi potencial.</p>
                 <div class="col-6 center">
                     <video width="480" height="330" controls="">
                 <source src="video/42.mp4" type="video/mp4">
               </video>
                 </div>
                 <div class="col-6 container-img">
-                    <img src="images/tipo.png" class="boy-programmer" alt="photo" width="110px" height="201px">
-                    <img src="images/ideas.png" class="animation-ideas" alt="photo" width="400px" height="400px">
+                    <img src="images/tipo.png" class="boy-programmer" alt="Imagen programador dibujo" width="110" height="201">
+                    <img src="images/ideas.png" class="animation-ideas" alt="Imagen de ideas rodeando al programador" width="400" height="400">
                 </div>
             </div>
             <div class="div-btn-scroll-up col-12 clearfix">
-                <a href="#btn-scroll-up" id="btn-scroll-up"><img class="btn-scroll-up" src="images/icons/button-scroll-up.png"></a>
+                <a href="#btn-scroll-up" id="btn-scroll-up"><img class="btn-scroll-up" src="images/icons/button-scroll-up.png" alt="icono scroll hacia arriba"></a>
             </div>
         </section>
     </main>
@@ -174,8 +222,19 @@
     <footer class="footer">
         Todos los derechos reservados &copy; 2017 Currículum Vitae
     </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101153961-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <amp-analytics type="googleanalytics" id="analytics1">
+
+    </amp-analytics>
 </body>
-<script type="text/javascript" src=js/menu.js></script>
-<script type="text/javascript" src=js/menu_contact.js></script>
 </html>
