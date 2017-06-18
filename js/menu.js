@@ -28,7 +28,6 @@ $(document).ready(function() {
   }
 
   $(window).scroll(function() {
-    console.log(window.pageYOffset);
 
     if (window.pageYOffset <= offsetQuienSoy.top-50) {
         deleteActiveClass();
@@ -43,15 +42,13 @@ $(document).ready(function() {
         deleteActiveClass();
         $("a[href$='estudios']").attr('class', 'navbar-link active');
 
-
-
       }
     if (window.pageYOffset >= offSetExperiencia.top-50) {
         deleteActiveClass();
         $("a[href$='experiencia']").attr('class', 'navbar-link active');
       }
 
-  
+
     if (window.pageYOffset >= offSetSobreMi.top-50) {
         deleteActiveClass();
         $("a[href$='sobre-mi']").attr('class', 'navbar-link active');
