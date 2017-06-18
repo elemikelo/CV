@@ -29,11 +29,6 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     console.log(window.pageYOffset);
-    if (window.pageYOffset > 0) {
-        $('#quien-soy').css('visibility', 'visible');
-        $('#quien-soy').css('animation', 'opacity 2s linear')
-
-      }
 
     if (window.pageYOffset <= offsetQuienSoy.top-50) {
         deleteActiveClass();
@@ -42,12 +37,6 @@ $(document).ready(function() {
     if (window.pageYOffset >= offsetQuienSoy.top-50 ) {
         deleteActiveClass();
         $("a[href$='quien-soy']").attr('class', 'navbar-link active');
-        $(".png-studies-1").css('visibility', 'visible');
-        $(".png-studies-2").css('visibility', 'visible');
-        $(".png-studies-1").css('animation', 'opacity 3s linear');
-        $(".png-studies-2").css('animation', 'opacity 3s linear');
-
-
 
       }
     if (window.pageYOffset >= offSetEstudios.top-50) {
@@ -62,11 +51,7 @@ $(document).ready(function() {
         $("a[href$='experiencia']").attr('class', 'navbar-link active');
       }
 
-    if (window.pageYOffset >= 1093) {
-        $('.delay-icons').css('visibility', 'visible');
-        $('.delay-icons').css('animation', 'opacity 2s linear');
-      }
-
+  
     if (window.pageYOffset >= offSetSobreMi.top-50) {
         deleteActiveClass();
         $("a[href$='sobre-mi']").attr('class', 'navbar-link active');
